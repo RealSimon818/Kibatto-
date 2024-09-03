@@ -68,9 +68,9 @@ const sendMail = async (name, email, phoneNumber, subject, message) => {
         });
 
         const mailOptions = {
-            from: `kibatufoundation.com`,
+            from: `Kibattofoundation.com`,
             to: process.env.SENT_EMAIL,//where the email will be sent
-            subject: ' Kibatu foundation New Form Submission',
+            subject: ' Kibatto foundation New Form Submission',
             text: `Name: ${name}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nSubject: ${subject}\nMessage: ${message}`,
         };
 
@@ -84,7 +84,7 @@ const sendMail = async (name, email, phoneNumber, subject, message) => {
 
 
 app.get("/contact", function (req, res) {
-    res.render('contact');
+    res.render('Contact');
   });
 
   app.get("/", function (req, res) {
@@ -115,7 +115,7 @@ app.get("/contact", function (req, res) {
         res.status(200).json({ message: 'Message sent successfully!' });
     } catch (error) {
         console.error('Error occurred:', error); // Log the error
-        res.status(500).json({ message: 'Failed to send message', error: error.message });
+        res.status(500).json({ message: 'Failed to send message, check your internet connection and try again', error: error.message });
     }
 });
 

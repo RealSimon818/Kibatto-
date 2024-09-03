@@ -7,8 +7,17 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
     
-    
+    // Display the processing message
+    const responseMessageDiv = document.getElementById('responseMessage');
+    responseMessageDiv.innerText = 'Processing...';
+    responseMessageDiv.classList.add('show');
      
+    // Hide the form immediately
+    document.getElementById('contactForm').style.display = 'none';
+
+    // Scroll up by 300 pixels
+    window.scrollBy({ top: -300, behavior: 'smooth' });
+
 
     try {
         const response = await fetch('/contact', {
@@ -20,8 +29,10 @@ document.getElementById('contactForm').addEventListener('submit', async (event) 
         });
 
         const result = await response.json();
-        document.getElementById('responseMessage').innerText = result.message;
+        document.getElementById('contactForm').classList.add('fade-out');
+        responseMessageDiv.innerText = result.message;
     } catch (error) {
-        document.getElementById('responseMessage').innerText = 'Failed to send message';
+        document.getElementById('contactForm').classList.add('fade-out');
+        responseMessageDiv.innerText = 'Failed to send message, check your internet connection and try again';
     }
 });

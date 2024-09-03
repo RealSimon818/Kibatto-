@@ -132,6 +132,16 @@
 .form-group {
     margin-bottom: 15px;
 }
+#contactForm {
+    transition: opacity 0.5s ease-out; /* Smooth fade-out transition */
+   
+}
+
+#contactForm.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction while fading out */
+}
+
 
 .contact-form input,
 .contact-form select,
@@ -168,6 +178,28 @@ border-bottom: 1px solid #3498db;
     .contact-form button {
         font-size: 0.9em;
     }
+}
+
+#responseMessage {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    max-width: 400px; /* Maximum width of the response message */
+    width: 100%;
+    background-color: #d4edda; /* Light green background for success messages */
+    color: #155724; /* Dark green text for success messages */
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it’s on top of other content */
+    text-align: center; /* Center the text */
+}
+
+/* Show the response message */
+#responseMessage.show {
+    display: block;
 }
 
 /* info-item */
