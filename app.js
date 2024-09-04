@@ -15,13 +15,6 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 
-console.log('MONGO_URI:', process.env.MONGO_URI);
-console.log('CLIENT_ID:', process.env.CLIENT_ID);
-console.log('CLIENT_SECRET:', process.env.CLIENT_SECRET);
-console.log('REDIRECT_URI:', process.env.REDIRECT_URI);
-console.log('REFRESH_TOKEN:', process.env.REFRESH_TOKEN);
-console.log('RECEIVER_EMAIL:', process.env.RECEIVER_EMAIL);
-console.log('SENT_EMAIL:',process.env.SENT_EMAIL);
 
 // Directly include your configuration values here
 const MONGO_URI = process.env.MONGO_URI
