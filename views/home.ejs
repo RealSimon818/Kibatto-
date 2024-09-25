@@ -14,51 +14,60 @@
 
   <!--About us-->
   <h2 class="display-5 text-center mb-0 mt-3"data-aos="flip-up" data-aos-delay="300">About Us</h2>
-  <section id="About-us">
-    <div class="About-container">
-      <div class="About-us">
-        <div class="About-text">
-          <div class="card cards"data-aos="slide-up">
-            <div class="card-body">
-              <h5 class="card-title mt-3">Company Overview</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">Who We Are</h6>
-              <p class="card-text">Our company is a newly established <br>provider of innovative solutions and <br>services Founded in 2023 our mission <br>is to make a positive impact on <br>the world We are committed to <br>delivering exceptional value to our <br>customers and making a difference <br>in their lives.</p>
+<section id="About-us">
+    <div class="About-container swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="About-text">
+            <div class="card cards" data-aos="slide-up">
+              <div class="card-body">
+                <h5 class="card-title mt-3">Company Overview</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Who We Are</h6>
+                <p class="card-text">Our company is a newly established <br>provider of innovative solutions and <br>services Founded in 2023 our mission <br>is to make a positive impact on <br>the world We are committed to <br>delivering exceptional value to our <br>customers and making a difference <br>in their lives.</p>
+              </div>
             </div>
           </div>
         </div>
   
-        <div class="About-text">
-          <div class="card cards"data-aos="slide-up" data-aos-delay="100">
-            <div class="card-body">
-              <h5 class="card-title mt-3">Our Story</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">How We Started</h6>
-              <p class="card-text">Our story began with a vision to <br>create a company that would make <br>a difference in the world Our <br>founders had a passion for innovation <br>and a desire to create a better <br>future We started the company with <br>a small team and a big dream <br>and we are excited to see what <br>the future holds.</p>
+        <div class="swiper-slide">
+          <div class="About-text">
+            <div class="card cards" data-aos="slide-up" data-aos-delay="100">
+              <div class="card-body">
+                <h5 class="card-title mt-3">Our Story</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">How We Started</h6>
+                <p class="card-text">Our story began with a vision to <br>create a company that would make <br>a difference in the world Our <br>founders had a passion for innovation <br>and a desire to create a better <br>future We started the company with <br>a small team and a big dream <br>and we are excited to see what <br>the future holds.</p>
+              </div>
             </div>
           </div>
         </div>
   
-        <div class="About-text" id="mission">
-          <div class="card cards"data-aos="slide-up" data-aos-delay="200">
-            <div class="card-body">
-              <h5 class="card-title mt-3">Our Mission</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary">What Drives Us</h6>
-              <p class="card-text">Kibatto Development Foundation boldly<br> works in order to evangelize, improve <br>child nutrition, care for the<br>earth and ultimately end<br>hunger and poverty in Nation.
+        <div class="swiper-slide" id="mission">
+          <div class="About-text">
+            <div class="card cards" data-aos="slide-up" data-aos-delay="200">
+              <div class="card-body">
+                <h5 class="card-title mt-3">Our Mission</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">What Drives Us</h6>
+                <p class="card-text">Kibatto Development Foundation boldly<br> works in order to evangelize, improve <br>child nutrition, care for the<br>earth and ultimately end<br>hunger and poverty in Nation.</p>
+              </div>
             </div>
           </div>
         </div>
   
-        <div class="About-text" id="values">
-          <div class="card cards"data-aos="slide-up" data-aos-delay="300">
-            <div class="card-body">
-              <h5 class="card-title mt-3 px-3">Our Values</h5>
-              <h6 class="card-subtitle mb-2 text-body-secondary px-3">What We Stand For</h6>
-              <p class="card-text px-3">We believe in innovation teamwork <br>customer satisfaction integrity and <br>social responsibility These values guide <br>our decisions and actions and are <br>the foundation of our company culture <br>We strive to make a positive impact <br>on the world and make a difference <br>in the lives of our customers.</p>
+        <div class="swiper-slide" id="values">
+          <div class="About-text">
+            <div class="card cards" data-aos="slide-up" data-aos-delay="300">
+              <div class="card-body">
+                <h5 class="card-title mt-3 px-3">Our Values</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary px-3">What We Stand For</h6>
+                <p class="card-text px-3">We believe in innovation teamwork <br>customer satisfaction integrity and <br>social responsibility These values guide <br>our decisions and actions and are <br>the foundation of our company culture <br>We strive to make a positive impact <br>on the world and make a difference <br>in the lives of our customers.</p>
+              </div>
             </div>
           </div>
         </div>
-        
       </div>
-      <div class="dotz"></div>
+  
+      <!-- Swiper Pagination (Dots) -->
+      <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -173,5 +182,32 @@
   <script>
     AOS.init();
   </script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+   <script>
+     var swiper = new Swiper('.swiper-container', {
+       slidesPerView: 1, // Default for mobile
+       spaceBetween: 10, // Reduced gap between slides (adjust as needed)
+       pagination: {
+         el: '.swiper-pagination',
+         clickable: true,
+       },
+       loop: true, // Ensure enough slides are available for looping
+       autoplay: {
+         delay: 3000,
+       },
+       breakpoints: {
+         640: {
+           slidesPerView: 2, // 2 slides on tablet
+           spaceBetween: 10, // Reduced gap for tablet
+         },
+         1024: {
+           slidesPerView: 4, // 4 slides on desktop
+           spaceBetween: 10, // Reduced gap for desktop
+         },
+       },
+     });
+   </script>
+   
 </body>
 </html>

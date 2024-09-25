@@ -125,37 +125,12 @@ html{
   }
   
   
-  .dotz {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
-  .dotz span {
-    display: none;
-    width: 10px;
-    height: 10px;
-    background-color: #bbb;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .dotz span.active {
-    background-color:  rgb(180, 6, 6);
-  }
   
   /* Responsive Styles */
   
     @media (max-width: 600px) {
-  .dotz span{
-    display: block;
-  }
+  
     
     .About-text{
       object-fit: cover;
@@ -165,15 +140,37 @@ html{
   }
     /* Tablet responsive design */
   @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .dotz span{
-      display: block;
-    }
+   
     .About-text{
       object-fit: cover;
       width: 100%;
       
     }
   }
+  .swiper-container {
+    width: 100%;
+    padding: 40px 0;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 400px; /* Adjust the max width of each card */
+    margin: 0 auto;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #000; /* Customize dot color */
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color:  rgb(180, 6, 6); /* Customize active dot color */
+  }
+  
 
   /*Our Prpograms*/
 .Education{
