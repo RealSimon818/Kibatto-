@@ -119,7 +119,7 @@ html{
   
   .cards{
     flex: 0 0 auto;
-    width: 320px;
+  
     height: 350px;
     margin-right: 10px; 
   }
@@ -147,20 +147,14 @@ html{
       
     }
   }
-  .swiper-container {
-    width: 100%;
-    padding: 40px 0;
-  }
   
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-  }
+  
+  
   
   .card {
-    width: 100%;
-    max-width: 400px; /* Adjust the max width of each card */
-    margin: 0 auto;
+
+    max-width: 320px; /* Adjust the max width of each card */
+ 
   }
   
   .swiper-pagination-bullet {
@@ -171,6 +165,22 @@ html{
     background-color:  rgb(180, 6, 6); /* Customize active dot color */
   }
   
+  /* Tablet (640px - 1023px) - Increase card width, height, and font size */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .swiper-slide .card {
+    width: 80%;  /* Increase width */
+    height: 400px;  /* Increase height */
+    margin: 0 auto;  /* Center the card */
+    font-size: 20px;  /* Increase font size */
+    text-align: center; /* Center text horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    padding: 20px;
+    max-width: 400px;
+  }
+}
 
   /*Our Prpograms*/
 .Education{
