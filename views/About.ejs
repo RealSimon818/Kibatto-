@@ -29,6 +29,22 @@
             </div>
         </section>
     </div>
+
+    <!--Certification Section-->
+<section id="certification" class="container my-5 text-center" >
+    <h2 class="fw-bold section-title"data-aos="fade-up" data-aos-delay="100">Certified and Registered</h2>
+    <p class="bodyFont"data-aos="fade-up" data-aos-delay="100">We are officially certified and registered by the Uganda Registration Services Bureau (URSB), ensuring transparency and authenticity in our operations.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-4"data-aos="fade-up" data-aos-delay="200">
+        <img src="images/ursb.jpg" alt="URSB Certificate 1" class="img-fluid mb-3 shadow">
+      </div>
+      <div class="col-md-4"data-aos="fade-up" data-aos-delay="200">
+        <img src="images/certi.jpg" alt="URSB Certificate 2" class="img-fluid mb-3 shadow">
+      </div>
+    </div>
+  </section>
+
+
 <!--mission, vision, values-->
 <section class="team-members">
     <div class="team-container">
@@ -112,5 +128,35 @@
   <script>
     AOS.init();
   </script> 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+ var swiper = new Swiper('.swiper-container', {
+   slidesPerView: 1, // Default for mobile
+   spaceBetween: 10, // Reduced gap
+   pagination: {
+     el: '.swiper-pagination',
+     clickable: true,
+     dynamicBullets: true,  // Use dynamic bullets for better control
+   },
+   loop: true,
+   autoplay: {
+     delay: 3000,
+   },
+   breakpoints: {
+     640: {
+       slidesPerView: 1, // 1 slides on tablet
+       spaceBetween: 10,
+     },
+     1024: {
+       slidesPerView: 4, // 4 slides on desktop
+       spaceBetween: 10,
+       pagination: false,  // Disable pagination for desktop
+     },
+   },
+ });
+</script>
+
 </body>
   </html>
